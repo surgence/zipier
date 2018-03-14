@@ -1,0 +1,4 @@
+#!/bin/bash
+coverage erase
+coverage run --omit='*migrations*,*tests*,*manage.py' --branch ./manage.py test $1
+coverage report --include=./$1* -m
