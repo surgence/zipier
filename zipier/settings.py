@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_admin_json_editor',
     'django_nose',
-    'nested_admin',
     'action.apps.ActionConfig',
     'zip.apps.ZipConfig',
 ]
