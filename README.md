@@ -78,3 +78,10 @@ Run the server:
 Build a Zip and a Action.
 
 Use `shell` to fire the action.
+
+```
+./manage.py shell
+from action.models import ActionWebhook
+hook = ActionWebhook.objects.get(pk=??)
+hook.make_it_so()
+```
