@@ -150,6 +150,7 @@ class SearchDictTest(TestCase):
             result[0], ('first_option', 'This is the one I want'))
         self.assertEqual(len(result), 1)
 
+
 class HandleResponseTest(TestCase):
     def test_handle_response_no_json(self):
         response = mock.MagicMock()

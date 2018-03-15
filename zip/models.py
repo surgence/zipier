@@ -1,6 +1,3 @@
-from collections import defaultdict
-import json
-
 from django.db import models
 from model_utils.models import TimeStampedModel
 

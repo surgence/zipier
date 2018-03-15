@@ -1,10 +1,7 @@
 from django.test import TestCase
-from model_mommy import mommy
 from unittest import mock
 
-from action.admin import (
-    ActionWebhookAdmin,
-    JSONEditorWidget,)
+from action.admin import ActionWebhookAdmin
 from action.models import ActionWebhook
 
 

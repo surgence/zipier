@@ -7,7 +7,7 @@ from model_mommy import mommy
 from unittest import mock
 
 from action.models import ActionWebhook
-import action.utils
+
 
 class ActionWebhookTest(TestCase):
 
@@ -149,7 +149,7 @@ class ActionWebhookTest(TestCase):
         webhook = mommy.make('action.ActionWebhook', hook_type='post',
                              data=data)
 
-        result = webhook.run_post()
+        webhook.run_post()
 
         get_headers.assert_called_once_with(
             {'Content-Type': 'application/json'})
@@ -166,7 +166,7 @@ class ActionWebhookTest(TestCase):
         webhook = mommy.make('action.ActionWebhook', hook_type='post',
                              data=data)
 
-        result = webhook.run_post()
+        webhook.run_post()
 
         get_headers.assert_called_once_with(
             {'Content-Type': 'application/xml'})
@@ -240,7 +240,7 @@ class ActionWebhookTest(TestCase):
         webhook = mommy.make('action.ActionWebhook', hook_type='put',
                              data=data)
 
-        result = webhook.run_put()
+        webhook.run_put()
 
         get_headers.assert_called_once_with(
             {'Content-Type': 'application/json'})
@@ -257,7 +257,7 @@ class ActionWebhookTest(TestCase):
         webhook = mommy.make('action.ActionWebhook', hook_type='put',
                              data=data)
 
-        result = webhook.run_put()
+        webhook.run_put()
 
         get_headers.assert_called_once_with(
             {'Content-Type': 'application/xml'})
